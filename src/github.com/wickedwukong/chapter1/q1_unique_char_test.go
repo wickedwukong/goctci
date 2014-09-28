@@ -12,4 +12,6 @@ func TestHasUniqueChars(t *testing.T) {
 	assert.False(t, HasUniqueChar("aa"), "It should be false [aa] has unique chars")
 	assert.False(t, HasUniqueChar("aba"), "It should be false [aba] has unique chars")
 	assert.False(t, HasUniqueChar("bacad"), "It should be false [aba] has unique chars")
+	assert.True(t, HasUniqueChar("Aa"), "Testing mixed case. It should be True [Aa] has unique chars")
+	assert.False(t, HasUniqueChar("aAbA"), "Testing mixed case. It should be False [aAbA] has unique chars")
 }
